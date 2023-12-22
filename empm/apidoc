@@ -1,0 +1,29 @@
+REGISTER
+  url:'http://127.0.0.1:8000/api/register/'
+  method:post
+  data:username,email,password
+
+TOKEN
+  url:'http://127.0.0.1:8000/api/token/'
+  method:post
+  data:username,password
+
+EMPLOYEE LIST
+  url:'http://127.0.0.1:8000/api/employees/'
+  method:get
+  authentication:token authentication
+
+EMPLOYEE DETAIL
+  url:'http://127.0.0.1:8000/api/employees/:id/'
+  method:get
+  authentication:token authentication
+
+ATTENDANCE 
+  url:'http://127.0.0.1:8000/api/employees/:id/attendance'
+  method:post
+  authentication:token authentication
+
+ATTENDANCE SHEET
+  url:'http://127.0.0.1:8000/api/employees/:id/attendancesheet'
+  method:get
+  authentication:token authentication
